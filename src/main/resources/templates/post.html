@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css" />
+    <script th:src="@{/js/jquery.js}" src="../static/js/jquery.js"></script>
+    <script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso SpringBoot</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a th:href="@{/home/posts}" class="navbar-brand">Spring Boot</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="#">Galeria</a>
+              <a class="nav-link" href="#">Post</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--Header-->
+      <div class="p-5 mb-4 bg-body-secondary rounded-3">
+        <div class="container-fluid py-5">
+          <h1 th:text="${post.getTitle}" class="display-5 fw-bold">Custom jumbotron</h1>
+          <p th:text="${post.getDescription}" class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+          <hr class="my-4">
+          <p th:text="${post.getDate}"></p>
+          <button class="btn btn-primary btn-lg" type="button">Example button</button>
+        </div>
+      </div>
+
+      <footer>
+        <p>SpringBoot Curso</p>
+      </footer>
+
+</body>
+</html>
